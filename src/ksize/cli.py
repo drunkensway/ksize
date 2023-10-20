@@ -1,4 +1,4 @@
-from kafka_topic_size import get_kafka_all_topics, describe_kafka_topics
+from .kafka_topic_size import get_kafka_all_topics, describe_kafka_topics
 
 import click
 import os
@@ -32,4 +32,3 @@ def ksize(bootstrap_server, config, topic, all, output):
         with open(output, 'w') as file:
             for topic in final_result:
                 file.write(topic)
-ksize()
