@@ -20,5 +20,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-kafka_install = "ksize.kafka_install:kafka_install"
 ksize = "ksize.cli:ksize"
