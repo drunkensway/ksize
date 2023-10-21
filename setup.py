@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='ksize',
-    version='0.1.2',
+    version='0.1.3',
     packages=['ksize'],
     install_requires=[
         # List your dependencies here
