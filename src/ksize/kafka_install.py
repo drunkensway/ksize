@@ -6,6 +6,11 @@ import tarfile
 import sys
 
 def kafka_install():
+    # Check if Kafka is already installed
+    if os.path.exists('/usr/local/Cellar/kafka'):
+        print("Kafka is already installed.")
+        return
+
     # Check the operating system
     if os.name == 'posix':
         # Running on Linux or MacOS
@@ -43,6 +48,8 @@ def kafka_install():
     else:
         print("Unsupported operating system.")
         return
+    # Refresh environment
+    os.system('source ~/.bashrc')
 
 
 # Call the function to execute the installation
